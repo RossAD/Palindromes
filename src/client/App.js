@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.png';
 import './App.css';
+import Input from './components/Input.js';
+import Result from './components/Result.js';
+import Header from './components/Header.js';
 
 class App extends Component {
   constructor(props) {
@@ -41,23 +44,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-           </p>
-        </div>
-        <input className="textInput" onChange={this.handleChange}
-          onKeyUp={this.createResult} />
-        <p className="App-intro">
-            {this.state.result.map((tag, index) => {
-                if(this.isPal(tag)){
-                  return (<span style={{color: 'red'}} key={index}>{tag} </span>)
-                } else {
-                  return (<span key={index}>{tag} </span>)
-                }
-              }
-            )}
-        </p>
+        <Header logo={logo} />
+        <Input 
+          handleChange={this.handleChange} 
+          createResult={this.createResult}
+        />
+        <Result 
+          isPal={this.isPal} 
+          result={this.state.result} 
+        />
       </div>
     );
   }
