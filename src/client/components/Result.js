@@ -8,11 +8,7 @@ class Result extends Component {
         <div className="Result-container">
           <p className="Results">
             {this.props.result.map((tag, index) => {
-                if(this.props.isPal(tag)){
-                  return (<span className="Palindrome" key={index}>{tag} </span>)
-                } else {
-                  return (<span key={index}>{tag} </span>)
-                }
+                return (<span className={this.props.isPal(tag) ? "Palindrome" : ""} key={index}>{tag} </span>)
               }
             )}
           </p>

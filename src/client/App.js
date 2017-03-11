@@ -12,20 +12,18 @@ class App extends Component {
     this.state = {
       input: "",
       result: [],
-      palindromes: [],
     }
 
-    this.handleChange = this.handleChange.bind(this);
-    this.createResult = this.createResult.bind(this);
-    this.isPal = this.isPal.bind(this);
   }
 
 /*
  *Check if word is a palendrome
  */
-  isPal(word) {
-    let reg = /[.,/#!$%?^&*;:{}=\-_`~()]/g;
-    let palArr = word.toUpperCase().replace(reg,'').split('');
+  isPal = (word) => {
+    //Regular expression to check for any non-character symbols
+    const reg = /[.,/#!$%?^&*;:{}=\-_`~()/\n]/g;
+
+    const palArr = word.toUpperCase().replace(reg,'').split('');
     let x = 0;
     let y = palArr.length - 1;
     let result = true;
@@ -42,15 +40,18 @@ class App extends Component {
  /*
  *Handle changes to input box
  */
-  handleChange(event) {
+  handleChange = (event) => {
    this.setState({input: event.target.value});
    this.createResult(this.state.input);
   }
 /*
  *Convert input string to array
  */
-  createResult() {
-   let result = this.state.input.split(' ');
+  createResult = () => {
+    //Regular expression to check for returns or spaces
+    const reg = /[\n\s]/g;
+
+    const result = this.state.input.split(reg);
    this.setState({result: result});
   }
 
