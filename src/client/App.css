@@ -1,24 +1,158 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+ *  *    v2.0 | 20110126
+ *   *       License: none (public domain)
+ *    *       */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* End of CSS reset */
+
 .App {
   text-align: center;
+  font-family: sans-serif;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
 
 .App-header {
-  background-color: #222;
+  background-color: #fdb82b;
   height: 150px;
   padding: 20px;
-  color: white;
+  margin: auto;
+  color: black;
+}
+
+.App-title {
+  padding: 10px;
+  font-size: 40px;
 }
 
 .App-intro {
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.Input-container {
+}
+
+.Input-header {
+  margin: 10px auto 10px;
+  font-weight: 800;
+  font-size: 25px;
+}
+
+.Text-input {
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  width: 400px;
+  height: 200px;
+  margin: auto;
+  padding: 10px;
+  font-size:18px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+.Result-header {
+  margin: 10px auto 10px;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.Result-container {
+  margin: auto;
+  padding: 10px;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  width: 400px;
+  height: 200px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.Results {
+  font-size:18px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+.Palindrome {
+  color: red;
+  font-weight:600;
+}
+
+/* ===== == = === 22.5em - 30em (360px - 480px) === = == ===== */
+
+@media only screen and (min-width : 22.5em) and (max-width : 30em) {
+  .App-logo {
+    height: 60px;
+  }
+  .Text-input  {
+    width: 80%;
+    height: 150px;
+  }
+
+  .Result-container {
+    width: 80%;
+    height: 150px;
+  }
+}
+
+/*===== == = === 20em - 22.4em (320px - 359px) === = == ===== */
+
+@media only screen and (min-width : 20em) and (max-width : 22.4em) {
+  .App-logo {
+    height: 60px;
+  }
+  .Text-input {
+    width: 80%;
+    height: 100px;
+  }
+  
+  .Result-container {
+    width: 80%;
+    height: 100px;
+  }
 }

@@ -12,12 +12,17 @@ class App extends Component {
     this.state = {
       input: "",
       result: [],
+      palindromes: [],
     }
 
     this.handleChange = this.handleChange.bind(this);
     this.createResult = this.createResult.bind(this);
+    this.isPal = this.isPal.bind(this);
   }
- isPal(word) {
+/*
+ *Check if word is a palendrome
+ */
+  isPal(word) {
     let reg = /[.,/#!$%?^&*;:{}=\-_`~()]/g;
     let palArr = word.toUpperCase().replace(reg,'').split('');
     let x = 0;
@@ -31,27 +36,41 @@ class App extends Component {
       y--;
     }
     return result;
- }
+  }
 
- handleChange(event) {
+  /*
+   *addPal(word) {
+   *  let temp = this.state.palindromes;
+   *  temp.push(word);
+   *  this.setState({palindromes: temp});
+   *}
+   */
+/*
+ *Handle changes to input box
+ */
+  handleChange(event) {
    this.setState({input: event.target.value});
    this.createResult(this.state.input);
- }
- createResult() {
+  }
+/*
+ *Convert input string to array
+ */
+  createResult() {
    let result = this.state.input.split(' ');
    this.setState({result: result});
- }
+  }
+
   render() {
     return (
       <div className="App">
         <Header logo={logo} />
-        <Input 
-          handleChange={this.handleChange} 
+        <Input
+          handleChange={this.handleChange}
           createResult={this.createResult}
         />
-        <Result 
-          isPal={this.isPal} 
-          result={this.state.result} 
+        <Result
+          isPal={this.isPal}
+          result={this.state.result}
         />
       </div>
     );
