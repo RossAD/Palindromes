@@ -5,6 +5,7 @@ class Result extends Component {
     return (
       <div>
         <p className="Result-header">Results</p>
+        <p className="Result-sub">Found Palindromes will be highlighted in <span className="Palindrome" >red</span></p>
         <div className="Result-container">
           <p className="Results">
             {this.props.result.map((tag, index) => {

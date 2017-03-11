@@ -96,7 +96,7 @@ table {
 }
 
 .Result-header {
-  margin: 10px auto 10px;
+  margin: 10px auto 2px;
   font-size: 25px;
   font-weight: 800;
 }
@@ -118,6 +118,11 @@ table {
   font-weight: 300;
 }
 
+.Result-sub {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
 .Palindrome {
   color: red;
   font-weight:600;
@@ -129,6 +134,11 @@ table {
   .App-logo {
     height: 60px;
   }
+
+  .Input-header {
+    font-size: 22px;
+  }
+
   .Text-input  {
     width: 80%;
     height: 150px;
@@ -146,6 +156,19 @@ table {
   .App-logo {
     height: 60px;
   }
+
+  .App-header {
+    height: 125px;
+  }
+
+  .App-title {
+    font-size: 30px;
+  }
+
+  .Input-header {
+    font-size: 20px;
+  }
+
   .Text-input {
     width: 80%;
     height: 100px;

@@ -13,7 +13,6 @@ class App extends Component {
       input: "",
       result: [],
     }
-
   }
 
 /*
@@ -37,13 +36,14 @@ class App extends Component {
     return result;
   }
 
- /*
+/*
  *Handle changes to input box
  */
   handleChange = (event) => {
    this.setState({input: event.target.value});
    this.createResult(this.state.input);
   }
+
 /*
  *Convert input string to array
  */
