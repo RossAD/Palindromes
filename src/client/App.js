@@ -19,6 +19,7 @@ class App extends Component {
     this.createResult = this.createResult.bind(this);
     this.isPal = this.isPal.bind(this);
   }
+
 /*
  *Check if word is a palendrome
  */
@@ -38,14 +39,7 @@ class App extends Component {
     return result;
   }
 
-  /*
-   *addPal(word) {
-   *  let temp = this.state.palindromes;
-   *  temp.push(word);
-   *  this.setState({palindromes: temp});
-   *}
-   */
-/*
+ /*
  *Handle changes to input box
  */
   handleChange(event) {
