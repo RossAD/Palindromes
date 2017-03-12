@@ -6,7 +6,7 @@ class Header extends Component {
       <div className="App-header">
         <img src={this.props.logo} className="App-logo" alt="logo" />
         <p className="App-title">
-          Palendrome Finder!
+          Palindrome Finder!
         </p>
       </div>
     )

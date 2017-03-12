@@ -1,19 +1,19 @@
 # Palindromes
 
 A simple application to highlight palidromes in a body of text.
+Check out deployed version: https://palindromes.herokuapp.com/
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your
-local machine for development and testing purposes. See deployment for notes on
-how to deploy the project on a live system.
+local machine for development and testing purposes.
 
 ### Prerequisites
 
 You will need 'NodeJS' installed. It can be found at the link below.
 
 Node.js:
-https://nodejs.org/en/ 
+https://nodejs.org/en/
 
 ### Installing
 
